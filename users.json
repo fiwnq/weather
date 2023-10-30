@@ -1,5 +1,10 @@
-{
-    "id": "Mike Smith",
-    "id": "Barack Obama",
-    "id": "Taylor Swift"
-}
+[
+    {
+        "id": "1",
+        "name": "Bill Smith"
+    },
+    {
+        "id": "2",
+        "name": "Jane Doe"
+    }
+]
