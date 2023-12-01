@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import Weather from './weather';
-import { useEffect, useState } from 'react';
+import Weather from './weather.js'; 
 
 function App() {
-
+  const [location, setLocation] = useState('Nashville US'); // made nashville default
   const [users, setUsers] = useState([]);
+
   useEffect(() => {
     fetch(`/api/users`)
-    .then ((res) => res.json())
-    .then ((data) => setUsers(data));
+      .then(res => res.json())
+      .then(data => setUsers(data));
   }, []);
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    const newLocation = event.target.elements.inputLocation.value.trim();
+    setLocation(newLocation); 
+  };
+
   return (
     <div className="App">
-      <h1>Weather app</h1>
-      <Weather /> {/* Render the Weather component */}
-      <h2>Users</h2>
-      {users.map((user) => (
-        <p key={user.id}>{user.name}</p>
-      ))}
+      <h1>Lipscomb Weather App</h1>
+      
+      <div className="row-1">
+        <form id="query-weather" onSubmit={handleSearch}>
+          <input type="text" className="input-left" id="input-location" name="inputLocation" placeholder="Enter Location" />
+          <button className="button-right" type="submit"><i className="fa fa-search"></i></button>
+        </form>
+      </div>
+
+      <Weather location={location} /> {}
+
+      
+      
     </div>
   );
 }
