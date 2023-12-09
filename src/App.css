@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +36,153 @@
     transform: rotate(360deg);
   }
 }
+*/
+
+/* App.css
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+
+body {
+  width: 90%;
+  margin: 50px auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.row-1 {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.row-1 > form {
+  width: 100%;
+}
+
+
+.row-2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.current-condition {
+  display: flex;
+}
+
+.current-weather-icon {
+  display: flex;
+  align-items: center;
+}
+
+
+.row-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+  width: 100%;
+  gap: 10px;
+}
+
+#forecast-data {
+  display: flex;
+  gap: 40px;
+  overflow-x: hidden;
+}
+
+#forecast-data > div {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+
+.input-left {
+  width: calc(100% - 71px);
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid grey; 
+}
+
+.input-left:hover,
+.input-left:active,
+.input-left:focus {
+  border-color: darkgray; 
+}
+
+
+.button-right {
+  width: 50px;
+  outline: none;
+  padding: 5px 10px;
+  margin-left: -5px;
+  cursor: pointer;
+  border: 1px solid grey; 
+}
+
+.button-right:hover {
+  background-color: teal;
+  color: white;
+}
+
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.w-50 {
+  width: 50px;
+}
+
+
+.pointer {
+  cursor: pointer;
+}
+
+.current-temp {
+  font-size: 30px;
+  margin-top: 20px; 
+}
+
+
+.forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+}
+
+.forecast-day {
+  flex: 0 0 20%; 
+  text-align: center;
+  margin: -30px; 
+  padding: 10px;
+margin-top: 90px }
+
+
+.extraInfo1 {
+  position: relative;
+  left: 999px;
+  top: -40px;
+} 
+
+.extraInfo2 {
+  position: relative;
+  left: 999px;
+  top: -30px;
+}
+
